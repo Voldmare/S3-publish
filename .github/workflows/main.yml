@@ -6,9 +6,9 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - name: test one
       - uses: actions/checkout@master
       - uses: jakejarvis/s3-sync-action@master
+      - name: test one
         with:
           args: --exclude '.git/*'
         env:
