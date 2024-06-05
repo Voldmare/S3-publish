@@ -11,7 +11,7 @@ jobs:
     - uses: shallwefootball/s3-upload-action@master
       with:
           aws_key_id: ${{ secrets.AWS_KEY_ID }}
-          aws_secret_access_key: 'xGZKw4tGl4W8JFdmbiLBn8MpxUaAYRAA77KFUSQD'
-          aws_bucket: 'tf-sf-stg-ng-search-service-26062023'
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_bucket: ${{ secrets.AWS_BUCKET }}
           source_dir: 'test'
-          destination_dir: '2d0Sl8hpd9twC3J4An390ajCpc4/2glxJbKhfV9HGvJinxgfGE7U325'
+          destination_dir: ${{ secrets.AWS_DIRNAME }}
