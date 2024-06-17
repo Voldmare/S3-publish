@@ -15,5 +15,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
           bucket_path_upload: ${{ secrets.AWS_DIRNAME }}
-          local_path_upload: ./test
+          local_path_upload: test
           zip: true
