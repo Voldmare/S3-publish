@@ -12,11 +12,11 @@ jobs:
       id-token: write
       contents: read
     steps:
-    - name: zipping files
-      run: zip -r ${{ github.event.repository.name }}_${{ steps.tag_name.outputs.tag }}.zip . -x '*.git*' '*.idea*'
-    
     - name: Checkout
       uses: actions/checkout@v2
+      
+    - name: Zipping files
+      run: zip -r ${{ github.event.repository.name }}.zip . -x '*.git*' '*.idea*'
 
     - name: Configure AWS credentials from Test account
       uses: aws-actions/configure-aws-credentials@v1
