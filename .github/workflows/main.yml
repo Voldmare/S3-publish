@@ -27,4 +27,4 @@ jobs:
 
     - name: Copy files to the test website with the AWS CLI
       run: |
-        aws s3 sync ./${{ github.event.repository.name }}_${{ steps.tag_name.outputs.tag }}.zip s3://${{ secrets.AWS_BUCKET }}/${{ secrets.AWS_DIRNAME }}
+        aws s3 sync ${{ github.event.repository.name }}.zip s3://${{ secrets.AWS_BUCKET }}/${{ secrets.AWS_DIRNAME }}
