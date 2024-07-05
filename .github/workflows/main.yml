@@ -20,7 +20,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Zipping files
-      run: zip -r ${{ github.event.repository.name }}.zip ./${{ secrets.LOCAL_SOURCE_PATH }} -x '*.git*' '*.idea*'
+      run: zip -r ${{ github.event.repository.name }}.zip . -x '*.git*' '*.idea*'
 
     - name: Configure AWS credentials from Test account
       uses: aws-actions/configure-aws-credentials@v1
